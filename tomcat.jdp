@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage ('SCM') {
             steps{
-git'https://github.com/Pimpalkar31/Devops-Jenkines.git'
+git'https://github.com/Pimpalkar31/tomcat-new-repo.git'
             }
         }
         stage ('Biuld') {
             steps{
-                sh 'mvn -f /pom.xml <goals> ...'
+                sh 'mvn clean package'
             }
         }
         stage ('Deploy') { 
