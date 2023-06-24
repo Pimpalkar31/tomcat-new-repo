@@ -14,7 +14,7 @@ git'https://github.com/Pimpalkar31/tomcat-new-repo.git'
         }
         stage ('Deploy') { 
             steps {
-               deploy adapters: [tomcat9(credentialsId: 'Roshan', path: '', url: 'http://192.168.29.184:8080')], contextPath: /, war: '**/*.war'
+               deploy adapters: [tomcat9(credentialsId: 'Roshan', path: '', url: 'http://192.168.29.184:8080')], contextPath: '/', war: '**/*.war'
             }
         }
         stage ('prod') {
